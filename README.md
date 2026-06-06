@@ -1,4 +1,4 @@
-# TalentDash — Career Intelligence Platform
+# TalentDash — Career Intelligence Platform ( [Live](https://talentdash-taupe.vercel.app/) )
 
 TalentDash is a career intelligence platform that provides structured, comparable, and decision-ready compensation data for tech and other roles in India. Built with Next.js 15, Prisma, and Tailwind CSS, the platform delivers fast performance and robust SEO via React Server Components (RSC), static page generation (SSG), Incremental Static Regeneration (ISR), and embedded JSON-LD structured data.
 
@@ -73,3 +73,14 @@ Page-based pagination was chosen for the directory tables because:
 | `/api/salaries` | **GET** | Query parameters: `company`, `role`, `level`, `location`, `currency`, `sort`, `page`, `limit`. | `{ data: Salary[], meta: { total, page, limit, totalPages } }`. Pagination limit is strictly capped at `100`. | `s-maxage=300`, `stale-while-revalidate=3600` |
 | `/api/companies/[slug]` | **GET** | `slug` (in path) | Returns company details, list of salaries ordered by total compensation, computed median compensation, and a `level_distribution` record. | `s-maxage=3600`, `stale-while-revalidate=86400` |
 | `/api/compare` | **GET** | Query parameters: `s1` (Salary ID 1), `s2` (Salary ID 2) | Returns `{ record_1, record_2, delta }` showing differences across base salary, bonus, stock, total comp, and experience. | `no-cache` |
+
+
+---
+
+## Author
+
+## Built by **Sahil Salap** — a passionate full-stack developer with a love for clean architecture and scalable design. Always eager to learn new technologies and solve complex problems.
+## Email: sahilsalap75@gmail.com
+## Phone: 8850306843
+## GitHub: [github.com/sahildev109](https://github.com/sahildev109)
+## LinkedIn: [linkedin.com/in/sahilsalap](https://www.linkedin.com/in/sahilsalap)

@@ -32,12 +32,50 @@ export default function HomePage() {
             <HeroSearch />
           </div>
 
-          {/* Placeholder for the 3D Illustration */}
-          <div className="hidden lg:flex w-[500px] h-[400px] items-center justify-center relative">
-             {/* Using abstract shapes to represent the aesthetic of the illustration */}
-             <div className="w-full h-full relative z-10 bg-gradient-to-br from-red-50 to-white border border-red-100 rounded-[3rem] shadow-2xl flex items-center justify-center overflow-hidden">
-                <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-red-100/50 to-transparent" />
-                <span className="text-red-200 font-bold text-2xl z-10">Illustration Area</span>
+          {/* CSS-based 3D Illustration Area */}
+          <div className="hidden lg:flex w-[500px] h-[400px] items-center justify-center relative perspective-1000">
+             <div className="w-full h-full relative z-10 bg-gradient-to-br from-red-50 to-white border border-red-100/50 rounded-[3rem] shadow-2xl overflow-hidden group">
+                <div className="absolute inset-0 bg-white/40" />
+                
+                {/* Decorative blob */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-br from-[#FF385C]/30 to-pink-400/30 rounded-full blur-3xl -z-10 animate-pulse" />
+
+                {/* Floating Card 1: Salary Offer */}
+                <div className="absolute top-16 left-12 w-64 bg-white/80 backdrop-blur-xl border border-white p-5 rounded-2xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] transform -rotate-6 group-hover:-rotate-2 transition-all duration-700 hover:scale-105 z-20">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-100 to-blue-50 border border-blue-200 flex items-center justify-center text-blue-600 font-bold shadow-inner text-lg">G</div>
+                    <div>
+                      <div className="text-xs font-extrabold text-gray-800 uppercase tracking-wide">Software Engineer</div>
+                      <div className="text-[10px] font-semibold text-gray-500">Google • L4</div>
+                    </div>
+                  </div>
+                  <div className="text-3xl font-black text-[#222222] tracking-tight">₹45.5L</div>
+                  <div className="flex items-center gap-1 mt-2">
+                    <svg className="w-3 h-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+                    <span className="text-[10px] font-bold text-green-600">+12% vs market</span>
+                  </div>
+                </div>
+
+                {/* Floating Card 2: Chart */}
+                <div className="absolute bottom-12 right-10 w-72 bg-white/90 backdrop-blur-xl border border-white p-5 rounded-2xl shadow-[0_30px_50px_-20px_rgba(255,56,92,0.2)] transform rotate-6 group-hover:rotate-2 transition-all duration-700 hover:scale-105 z-30 delay-100">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="text-[10px] font-extrabold text-gray-500 uppercase tracking-widest">Comp Growth</div>
+                    <div className="flex gap-1">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-200" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-300" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#FF385C]" />
+                    </div>
+                  </div>
+                  <div className="flex items-end justify-between gap-2 h-24">
+                    <div className="w-full bg-red-50 rounded-t-md relative group/bar hover:bg-red-100 transition-colors" style={{ height: '40%' }} />
+                    <div className="w-full bg-red-100 rounded-t-md relative group/bar hover:bg-red-200 transition-colors" style={{ height: '60%' }} />
+                    <div className="w-full bg-red-200 rounded-t-md relative group/bar hover:bg-red-300 transition-colors" style={{ height: '50%' }} />
+                    <div className="w-full bg-[#FF385C] rounded-t-md shadow-lg shadow-red-500/30 relative" style={{ height: '100%' }}>
+                      <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-[#222222] text-white text-[9px] font-bold px-2 py-1 rounded shadow-lg">₹62L</div>
+                    </div>
+                    <div className="w-full bg-red-100 rounded-t-md relative group/bar hover:bg-red-200 transition-colors" style={{ height: '80%' }} />
+                  </div>
+                </div>
              </div>
           </div>
         </div>
